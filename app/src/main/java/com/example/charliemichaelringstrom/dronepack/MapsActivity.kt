@@ -75,8 +75,8 @@ class MapsActivity : BaseActivity(),    //Extends BaseActivity to inherit it's b
     var outputStream: DataOutputStream? = null
     var inputStream: DataInputStream? = null
 
-    private val ipAddress = IP_ADDRESS  //Sensitive information, not to be shared on GitHub
-    private val port = PORT_NUMBER     //Sensitive information, not to be shared on GitHub
+    private val ipAddress = 129.147.224.188  //Sensitive information, not to be shared on GitHub
+    private val port = 7777    //Sensitive information, not to be shared on GitHub
     private var client: Socket? = null
 
     //lazy initializes the mSearchview variable when first used in the code
