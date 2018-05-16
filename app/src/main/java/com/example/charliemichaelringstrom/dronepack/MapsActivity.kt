@@ -26,6 +26,7 @@ import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import com.example.charliemichaelringstrom.dronepack.R.id.drawer_layout
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -60,7 +61,6 @@ class MapsActivity : BaseActivity(),    //Extends BaseActivity to inherit it's b
         HandleData.OnDownloadComplete,
         GoogleMapsSearch.OnMapsResultComplete {
     private val TAG: String = "MainActivity"
-    private val GOOGLE_API_KEY = "AIzaSyClDqR98t_ytnz0hMTBPlK2ijF5vrKPrBs"      //API key. Not used in app
     private lateinit var mGoogleMap: GoogleMap      //GoogleMap object, the main Maps object
     private var mHistoryDatabase: SearchHistoryTable = SearchHistoryTable(this)     //Used with the SearchView API
     private var mUserMarker: Marker? = null
@@ -75,8 +75,8 @@ class MapsActivity : BaseActivity(),    //Extends BaseActivity to inherit it's b
     var outputStream: DataOutputStream? = null
     var inputStream: DataInputStream? = null
 
-    private val ipAddress = "31.211.232.4"
-    private val port = 7000
+    private val ipAddress = IP_ADDRESS  //Sensitive information, not to be shared on GitHub
+    private val port = PORT_NUMBER     //Sensitive information, not to be shared on GitHub
     private var client: Socket? = null
 
     //lazy initializes the mSearchview variable when first used in the code
